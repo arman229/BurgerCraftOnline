@@ -7,25 +7,19 @@ import cucumbar from "@/components/images/cucumber.png";
 import cheese from "@/components/images/cheese.png";
 import salad from "@/components/images/salad.png";
 import ban from "@/components/images/ban.png";
-import visa from "@/components/images/visa.svg";
-import image2 from "@/components/images/twobank.svg";
-import gpay from "@/components/images/gpay.svg";
-import pay from "@/components/images/pay.svg";
-import p from "@/components/images/p.svg";
-import bitcon from "@/components/images/bitcone.svg";
-import Etherium from "@/components/images/Etherium.svg";
+import bun_bottom from "@/components/images/bun_bottom.png";
+import {Ingredient} from "@/data/Ingredient";
 
-
-export type Ingridient = {
-    id: number
-    imgSrc: string
-    productName: string
-    price: number
-    weight: number
-    calories: number
-    time: number
+export const burgerBottom: Ingredient = {
+    id: 0,
+    imgSrc: bun_bottom,
+    productName: 'Bun bottom',
+    price: 2.5,
+    weight: 1,
+    calories: 30,
+    time: 0.1,
 }
-export const cardArray: Ingridient[] = [
+export const allIngredients: Ingredient[] = [
     {
         id: 1,
         imgSrc: cutlet,
@@ -99,12 +93,26 @@ export const cardArray: Ingridient[] = [
         time: 0.5,
     },
 ];
-export const imageArray:string[] = [
-    visa,
-    image2,
-    gpay,
-    pay,
-    p,
-    bitcon,
-    Etherium
-];
+
+
+export const cartdata = [
+    {
+        myid: 1,
+        imageUrl: Mayo,
+        price: 33, quantity: 1,
+    },
+    {
+        myid: 2,
+        imageUrl: Mayo,
+        price: 33, quantity: 1,
+    },
+    {
+        myid: 3,
+        imageUrl: Mayo,
+        price: 33, quantity: 1,
+    },
+    {
+        myid: 4,
+        imageUrl: Mayo,
+        price: 33, quantity: 1,
+    }]

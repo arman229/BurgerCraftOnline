@@ -1,9 +1,4 @@
 // Import necessary modules and components
-import { FiShoppingCart } from "react-icons/fi";
-import Link from "next/link";
-import wesitelogo from "@/components/images/websitelogo.jpg"; // Corrected file extension
-import Image from "next/image";
-import BurgerImage from '@/components/images/discoverburger.png'; // Assuming this is the correct import
 
 const TermsAndConditions = () => {
     return (

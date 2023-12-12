@@ -1,13 +1,10 @@
-import Discoverburger from "@/components/discover";
+import DiscoverBurger from "@/components/DiscoverBurger";
 
 
 export default function Home() {
-
-
     return (
-     <>
-         <Discoverburger/>
-
-     </>
+        <>
+            <DiscoverBurger/>
+        </>
     );
 }

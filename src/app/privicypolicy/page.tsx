@@ -5,7 +5,7 @@ import wesitelogo from "@/components/images/websitelogo.jpg"; // Corrected file 
 import Image from "next/image";
 import DiscoverBurgerImage from '@/components/images/discoverburger.png'; // Assuming this is the correct import
 
-const Privicypolicy = () => {
+const PrivacyPolicy = () => {
     return (
         <div className=" " data-aos="fade-left">
             <div className="container mx-auto " >
@@ -46,4 +46,4 @@ const Privicypolicy = () => {
     );
 };
 
-export default Privicypolicy;
+export default PrivacyPolicy;
