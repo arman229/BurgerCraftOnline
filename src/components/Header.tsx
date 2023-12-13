@@ -1,12 +1,13 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import phoneimage from './images/phone.svg';
-import wesitelogo from './images/websitelogo.JPG';
+import phoneimage from './assets/images/phone.svg';
+import wesitelogo from './assets/images/websitelogo.JPG';
 import {FiShoppingCart} from 'react-icons/fi';
 import {usePathname} from "next/navigation";
 import {useContext} from "react";
 import {MyContext, MyContextType} from "@/app/layout";
+
 
 export const Header = () => {
     const pathname = usePathname()
@@ -14,21 +15,21 @@ export const Header = () => {
 
     return (
         <>
-            <div className="flex justify-between items-center px-2 font-bold border-b  ">
+            <div className="flex justify-between items-center text-lg px-2 font-bold border-b  ">
                 <div className="flex gap-4">
-                    <Image src={wesitelogo} style={{height: '40px', width: 'auto'}}/>
-                    <Link className={`flex items-center hover:underline ${pathname === '/' ? 'underline' : ''}`}
+                    <Image src={wesitelogo} style={{height: '40px', width: 'auto'}} alt={'image not shows'}/>
+                    <Link className={`flex items-center my-1 customunderline ${pathname === '/' ? 'customunderlineactive' : ''}`}
                           href={'/'}>Discover</Link>
                     <Link
-                        className={`flex items-center hover:underline ${pathname === '/makeyourburger' ? 'underline' : ''}`}
+                        className={`flex items-center my-1 customunderline ${pathname === '/makeyourburger' ? 'customunderlineactive' : ''}`}
                         href={'/makeyourburger'}>Make your Burger</Link>
                 </div>
                 <div className="flex">
-                    <div className="flex px-2 items-center  md:flex">
+                    <div className="flex px-2 items-center  ">
                         <Link href={'/contactus'}>
                             <button
                                 className="rounded-[1rem] bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                                <Image src={phoneimage}></Image>
+                                <Image src={phoneimage} alt={'image not shows'}/>
                                 <span>&nbsp;&nbsp;Contact us</span>
                             </button>
                         </Link>

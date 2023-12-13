@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import Image from "next/image";
-import Images from '@/components/images/discoverburger.png'
+import Images from '@/components/assets/images/discoverburger.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, {useEffect} from 'react';

@@ -11,7 +11,7 @@ const Contactus = () => {
 
                 <div className="container mx-auto mt-2 p-4 bg-white rounded-lg shadow-lg">
                     <h2 className="text-lg font-semibold">Get in Touch</h2>
-                    <p className="mb-4">We'd love to hear from you. Please use the form below to send us your
+                    <p className="mb-4">We&apos;d love to hear from you. Please use the form below to send us your
                         message.</p>
 
                     <div className="mb-4">

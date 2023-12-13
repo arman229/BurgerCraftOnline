@@ -21,7 +21,7 @@ const TermsAndConditions = () => {
 
                     <h2 className="text-lg font-semibold">Use of Our Website</h2>
                     <p className="mb-4">
-                        You agree to use our website for lawful purposes and in a way that does not infringe on the rights of, restrict or inhibit anyone else's use and enjoyment of the site.
+                        You agree to use our website for lawful purposes and in a way that does not infringe on the rights of, restrict or inhibit anyone else&apos;s use and enjoyment of the site.
                     </p>
 
                     <h2 className="text-lg font-semibold">Intellectual Property</h2>

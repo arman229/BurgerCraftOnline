@@ -4,8 +4,6 @@ import React, {useContext, useState} from "react";
 
 import {allIngredients, burgerBottom} from "@/data/allIngredients";
 import ItemCart from "@/components/itemcard";
-import addAudioFile from "@/components/audio/audio.mp3";
-import removeAudioFile from "@/components/audio/remove.mp3";
 import BurgerSummary from "@/components/BurgerSummary";
 import html2canvas from "html2canvas";
 import {Ingredient} from "@/data/Ingredient";
@@ -16,8 +14,7 @@ import {CartItem} from "@/data/CartItems";
 const MakeBurger = () => {
     const {addToCart} = useContext(MyContext)
     const [ingredients, setIngredients] = useState<Ingredient[]>([burgerBottom]);
-    const addAudio = new Audio(addAudioFile);
-    const removeAudio = new Audio(removeAudioFile);
+
     const totalPrice = ingredients.reduce((sum, ingri) => sum + ingri.price, 0)
     const capture = () => {
         const captureDiv = document.getElementById('captureDiv');
@@ -39,7 +36,8 @@ const MakeBurger = () => {
     };
     const handleIncr = (ingredient) => {
         setIngredients(items => [...items, ingredient]);
-        addAudio.play();
+        const addaudio = new Audio('/audio/audio.mp3');
+        addaudio.play()
     };
 
     const handleDec = (ingredient) => {
@@ -49,7 +47,8 @@ const MakeBurger = () => {
                 ...items.slice(0, index),
                 ...items.slice(index + 1),
             ]);
-            removeAudio.play();
+            const removeaudio = new Audio('/audio/audio.mp3');
+            removeaudio.play()
         }
     };
 
@@ -60,7 +59,7 @@ const MakeBurger = () => {
             <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-3 px-2 ">
                 <div className="relative border-4 " style={{height: 'auto', minHeight: '300px'}}>
                     <div id="captureDiv" className={'pb-2 m-0 flex items-end justify-end flex-col'}>
-                        {ingredients.toReversed().map((item, index) => (
+                        {ingredients.slice().reverse().map((item, index) => (
                             <div key={index}>
                                 <Image src={item.imgSrc} alt={item.productName} width={350} height={50}/>
                             </div>

@@ -1,13 +1,13 @@
 'use client'
 import Link from "next/link";
 import Image from "next/image";
-import visa from "@/components/images/visa.svg";
-import image2 from "@/components/images/twobank.svg";
-import gpay from "@/components/images/gpay.svg";
-import pay from "@/components/images/pay.svg";
-import p from "@/components/images/p.svg";
-import bitcon from "@/components/images/bitcone.svg";
-import Etherium from "@/components/images/Etherium.svg";
+import visa from "@/components/assets/images/visa.svg";
+import image2 from "@/components/assets/images/twobank.svg";
+import gpay from "@/components/assets/images/gpay.svg";
+import pay from "@/components/assets/images/pay.svg";
+import p from "@/components/assets/images/p.svg";
+import bitcon from "@/components/assets/images/bitcone.svg";
+import Etherium from "@/components/assets/images/Etherium.svg";
 
 const paymentOptions: string[] = [
     visa,

@@ -1,13 +1,13 @@
 // cardArray.js
-import cutlet from "@/components/images/cutlet.png";
-import Mayo from "@/components/images/Mayo.png";
-import onion from "@/components/images/onine.png";
-import tomato from "@/components/images/tomato.png";
-import cucumbar from "@/components/images/cucumber.png";
-import cheese from "@/components/images/cheese.png";
-import salad from "@/components/images/salad.png";
-import ban from "@/components/images/ban.png";
-import bun_bottom from "@/components/images/bun_bottom.png";
+import cutlet from "@/components/assets/images/cutlet.png";
+import Mayo from "@/components/assets/images/Mayo.png";
+import onion from "@/components/assets/images/onine.png";
+import tomato from "@/components/assets/images/tomato.png";
+import cucumbar from "@/components/assets/images/cucumber.png";
+import cheese from "@/components/assets/images/cheese.png";
+import salad from "@/components/assets/images/salad.png";
+import ban from "@/components/assets/images/ban.png";
+import bun_bottom from "@/components/assets/images/bun_bottom.png";
 import {Ingredient} from "@/data/Ingredient";
 
 export const burgerBottom: Ingredient = {

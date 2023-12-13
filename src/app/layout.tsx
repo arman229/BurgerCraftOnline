@@ -2,7 +2,7 @@
 import './globals.css'
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-import {createContext, useState} from "react";
+import {createContext, useRef, useState} from "react";
 import {CartItem} from "@/data/CartItems";
 
 
@@ -26,12 +26,22 @@ export type MyContextType = {
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
     const [cartsState, setCarts] = useState<CartItem[]>([]);
+    const idCounter = useRef(1);
     const addToCartInner = (item: CartItem) => {
-        setCarts([...cartsState, item])
+
+        const newItem = {
+            ...item,
+            burger: {
+                ...item.burger,
+                id: idCounter.current++
+            }
+        };
+        setCarts([...cartsState, newItem])
+
     }
     const removeFromCartInner = (item: CartItem) => {
         const updatedCart = [...cartsState];
-        setCarts(updatedCart.filter(c => c.burger.id !== item.burger.id));
+        setCarts(updatedCart.filter((c) => c.burger.id !== item.burger.id));
     }
     const updateQuantityInner = (item: CartItem, newQuantity: number) => {
         if (newQuantity >= 1) {

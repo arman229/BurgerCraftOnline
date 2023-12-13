@@ -1,9 +1,9 @@
 // Mysummary.js
 import React, {useState} from "react";
 import Image from "next/image";
-import timeicon from "@/components/images/timeicon.png";
-import summaryicon from "@/components/images/Summary_icons.png";
-import calaries from "@/components/images/calaries.png";
+import timeicon from "@/components/assets/images/timeicon.png";
+import summaryicon from "@/components/assets/images/Summary_icons.png";
+import calaries from "@/components/assets/images/calaries.png";
 
 const BurgerSummary = ({totalPrice, totalTime, totalWeight, totalCalories, addToCart}) => {
 
@@ -18,10 +18,7 @@ const BurgerSummary = ({totalPrice, totalTime, totalWeight, totalCalories, addTo
                         <button type="button" className="px-6 p-2  bg-blue-500 hover:bg-blue-700  rounded-full " onClick={() => addToCart()}>Add to Cart
                         </button>
                     </div>
-                    <h2 className={'py-5 text-xl'}>Purchase <button type="button"
-                                                                    className={'hover:text-blue-500 text-red-600'}>10
-                        burgers
-                    </button>{" "}and receive a complimentary gift!
+                    <h2 className={'py-5 text-xl'}>Explore our menu for a diverse range of flavorful options.
                     </h2>
                     <div className="flex justify-between p-4 border rounded-full bg-blue-400">
                         <div className="flex items-center justify-center">
